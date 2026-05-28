@@ -1,0 +1,37 @@
+# Cisco Routers/Switches Layer 3 Ports
+# By: github.com/sty-nathan
+
+// TCP
+
+T:22       SSH
+T:23       Telnet
+T:49       TACACS+
+T:53       DNS
+T:80       HTTP Panel
+T:443      HTTPS Panel
+T:2001     Cisco SCCP
+T:4786     Smart Install
+T:8080     Web Panel
+T:8443     HTTPS Panel
+
+// UDP
+
+U:53       DNS
+U:69       TFTP
+U:123      NTP
+U:161      SNMP
+U:162      SNMP Trap
+U:500      ISAKMP
+U:1985     HSRP
+U:4789     VXLAN
+
+// NMAPable
+
+* TCP PORTS
+-p 22,23,49,53,80,443,2001,4786,8080,8443
+
+* UDP PORTS
+-sU -p 53,69,123,161,162,500,1985,4789
+
+* TCP & UDP
+-sSU -p T:22,23,49,53,80,443,2001,4786,8080,8443,U:53,69,123,161,162,500,1985,4789

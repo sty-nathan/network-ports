@@ -1,0 +1,54 @@
+# Common cam Ports
+# By: github.com/sty-nathan
+
+// TCP
+
+T:554      RTSP
+T:8554     Alternate RTSP
+T:10554    Alternate RTSP
+T:1935     RTMP Streaming
+T:37777    Dahua DVR/NVR Service
+T:34567    XMeye/Xiongmai Service
+T:8899     Vendor Streaming Service
+T:5000     Camera API/Admin
+T:5001     Camera API/Admin
+T:5800     Embedded VNC/Web
+T:6036     DVR/NVR Web Service
+T:7001     Proprietary Admin Panel
+T:7002     Proprietary Admin Panel
+T:8081     Alternate Web Panel
+T:8090     Alternate Web Panel
+T:8999     Vendor Admin Service
+T:9000     DVR/NVR Service
+T:9999     Debug/Admin Service
+T:10000    Management Panel
+T:32764    Embedded Backdoor/Debug
+
+//UDP
+
+U:554      RTP/RTSP Media
+U:3702     ONVIF Discovery
+U:1900     SSDP/UPnP Discovery
+U:3478     STUN/TURN
+U:5000     Vendor Streaming
+U:5001     Vendor Streaming
+U:8001     RTP Video Stream
+U:8200     Media Streaming
+U:10001    Vendor Media Service
+U:20000    RTP Media
+U:32768    RTP Dynamic Media
+U:34567    XMeye/Xiongmai Service
+U:37778    Dahua Media Stream
+U:49152    Dynamic RTP Media
+U:50000    Media Stream
+
+// NMAPable
+
+* TCP PORTS
+-p 554,8554,10554,1935,37777,34567,8899,5000,5001,5800,6036,7001,7002,8081,8090,8999,9000,9999,10000,32764
+
+* UDP PORTS
+-sU -p 554,3702,1900,3478,5000,5001,8001,8200,10001,20000,32768,34567,37778,49152,50000 (ROOT NEEDED)
+
+* TCP & UDP
+-sSU -pT:554,8554,10554,1935,37777,34567,8899,5000,5001,5800,6036,7001,7002,8081,8090,8999,9000,9999,10000,32764,U:554,3702,1900,3478,5000,5001,8001,8200,10001,20000,32768,34567,37778,49152,50000 (ROOT NEEDED)

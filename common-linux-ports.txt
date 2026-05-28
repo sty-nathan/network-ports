@@ -1,0 +1,46 @@
+# Common Linux Ports
+# By: github.com/sty-nathan
+
+// TCP
+
+T:22       SSH
+T:111      RPCbind
+T:2049     NFS
+T:2375     Docker API
+T:2376     Docker TLS
+T:3306     MySQL
+T:5432     PostgreSQL
+T:5900     VNC
+T:6000     X11
+T:6379     Redis
+T:6443     Kubernetes API
+T:8000     Dev HTTP
+T:8080     Alternate HTTP
+T:8443     HTTPS Admin
+T:9000     PHP-FPM/API
+T:9090     Prometheus
+T:9100     Node Exporter
+T:9200     Elasticsearch
+T:9418     Git
+T:10000    Webmin
+T:11211    Memcached
+T:27017    MongoDB
+
+// UDP
+
+U:111      RPCbind
+U:123      NTP
+U:161      SNMP
+U:2049     NFS
+U:5353     mDNS
+
+// NMAPable
+
+* TCP PORTS
+-p 22,111,2049,2375,2376,3306,5432,5900,6000,6379,6443,8000,8080,8443,9000,9090,9100,9200,9418,10000,11211,27017
+
+* UDP PORTS
+-sU -p 111,123,161,2049,5353
+
+* TCP & UDP
+-sSU -p T:22,111,2049,2375,2376,3306,5432,5900,6000,6379,6443,8000,8080,8443,9000,9090,9100,9200,9418,10000,11211,27017,U:111,123,161,2049,5353

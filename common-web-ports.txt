@@ -1,0 +1,29 @@
+# common HTTP/HTTPS Ports
+# By: github.com/sty-nathan
+
+// TCP
+
+T:80       HTTP
+T:81       Alternate HTTP
+T:3000     NodeJS/Web
+T:5000     Flask/API
+T:5601     Kibana
+T:7001     WebLogic
+T:7443     HTTPS Alternate
+T:8000     HTTP Alternate
+T:8008     HTTP Alternate
+T:8080     HTTP Proxy/Web
+T:8081     HTTP Alternate
+T:8088     Web Panel
+T:8090     HTTP Alternate
+T:8443     HTTPS Alternate
+T:8888     Jupyter/Web
+T:9000     API/Admin
+T:9090     Web Console
+T:9443     HTTPS Admin
+T:10000    Webmin
+
+// NMAPable
+
+* TCP PORTS
+-p 80,81,3000,5000,5601,7001,7443,8000,8008,8080,8081,8088,8090,8443,8888,9000,9090,9443,10000
